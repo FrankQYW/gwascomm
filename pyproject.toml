@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "commgwas"
+version = "0.1.0"
+description = "Scanpy-style cell-cell communication enrichment of MAGMA gene-level GWAS signals"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scipy"]
+
+[project.optional-dependencies]
+singlecell = ["anndata", "scanpy", "liana"]
+development = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["commgwas*"]
