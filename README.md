@@ -132,7 +132,9 @@ externally across the relevant family of tests.
   weighting or expanded expression-based backgrounds.
 - **Inference.** By default, tests use 5,000 permutations and `random_state=0`.
   One-sided empirical p-values use the plus-one correction:
-  $P_{\mathrm{emp}}=(1+\#\{T_{\mathrm{perm}}\geq T_{\mathrm{obs}}\})/(1+N_{\mathrm{perm}})$.
+  $P_{\mathrm{emp}}=(1+b)/(1+N_{\mathrm{perm}})$,
+  where $b$ is the number of permutations with
+  $T_{\mathrm{perm}}\geq T_{\mathrm{obs}}$.
   Enrichment z-scores standardize the observed statistic against the null
   distribution.
 
